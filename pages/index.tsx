@@ -1,15 +1,20 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from "next/link";
+import { Button, Text, Link as UILink, Flex } from "@chakra-ui/react";
+import Layout from "../components/Layout";
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+  <Layout title="Charts PoC">
+    <Flex direction="column" pt={2}>
+      <Text fontSize="xl">Charts PoC with Recharts</Text>
+      <Flex pt={4} pb={4}>
+        <UILink as={Link} href="/body-weights">
+          <Button size="xs" colorScheme="blue">
+            Body Weights
+          </Button>
+        </UILink>
+      </Flex>
+    </Flex>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
